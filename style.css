@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Press+Start+2P&display=swap');
+body {
+	font-family: 'Press Start 2P', cursive;
+	color: #fff;
+	background-color: transparent;
+}
+#discord-widget {
+	font-family: 'Press Start 2P', cursive;
+	width: 300px;
+	color: #dcddde;
+	border-radius: 8px;
+	padding: 15px;
+}
+.activity {
+	padding: 12px;
+	border-radius: 6px;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+.activity-icon {
+	width: 50px;
+	height: 50px;
+	border-radius: 4px;
+	margin-right: 10px;
+	object-fit: cover;
+}
+.activity-content {
+	flex: 1;
+}
+.activity-name {
+	font-weight: 600;
+	margin-bottom: 5px;
+	color: white;
+}
+.activity-details {
+	font-size: 14px;
+	color: #b9bbbe;
+	margin: 3px 0;
+}
+.no-activity {
+	color: #72767d;
+	font-style: italic;
+}
+
+.pixel-font {
+	font-family: 'Press Start 2P', cursive;
+}
+.cursor-trail {
+	position: fixed;
+	width: 8px;
+	height: 8px;
+	background-color: #fff;
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 9999;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.social-carousel-container {
+	position: relative;
+	overflow: hidden;
+	padding: 19px 0;
+}
+.social-carousel {
+	display: flex;
+	transition: transform 0.5s ease;
+}
+.social-tile {
+	min-width: 156px;
+	height: 120px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-right: 16px;
+	transition: transform 0.2s;
+}
+
+.social-tile svg {
+	width: 32px;
+	height: 32px;
+	margin-bottom: 8px;
+}

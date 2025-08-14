@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Визитка</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body
+		class="min-h-screen flex flex-col items-center justify-center p-4 relative"
+	>
+		<div class="cursor-trail"></div>
+
+		<!-- Background image with blur -->
+		<div class="fixed inset-0 z-[-1]">
+			<div
+				class="absolute inset-0 bg-cover bg-center filter blur-md"
+				style="background-image: url('bg.jpg')"
+			></div>
+			<div class="absolute inset-0 bg-black bg-opacity-70"></div>
+		</div>
+
+		<main class="max-w-2xl w-full px-4 py-12">
+			<div
+				class="mb-12 flex flex-col md:flex-row items-center md:items-start gap-8"
+			>
+				<div class="w-48 h-48 md:w-56 md:h-56 flex-shrink-0">
+					<div
+						class="w-full h-full bg-gray-800 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-700"
+					>
+						<!-- Замените src на путь к вашему фото 640×640 -->
+						<img
+							src=""
+							alt="Фото"
+							class="w-full h-full object-cover rounded-lg"
+						/>
+					</div>
+				</div>
+				<div class="text-center md:text-left">
+					<h1 class="text-2xl md:text-3xl font-light mb-2"></h1>
+					<p class="text-lg text-gray-400"></p>
+					<p class="text-lg text-gray-400">live-time activity</p>
+					<div id="discord-widget">
+						<div id="activities">
+							<p class="no-activity">Загрузка данных...</p>
+						</div>
+						<div id="last-updated" class="last-updated"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="space-y-8 mb-16">
+				<section>
+					<h2 class="text-xl font-light mb-4 border-b border-gray-200 pb-2">
+						About me:
+					</h2>
+					<p class="text-gray-300 leading-relaxed text-sm"></p>
+				</section>
+				<section>
+					<h2 class="text-xl font-light mb-4 border-b border-gray-600 pb-2">
+						My links
+					</h2>
+					<div class="social-carousel-container flex justify-center">
+						<div
+							id="socialCarousel"
+							class="social-carousel flex flex-wrap justify-center gap-4"
+						>
+							<a href="" class="social-tile link-hover">
+								<svg viewBox="0 0 24 24" fill="currentColor">
+									<path
+										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"
+									/>
+								</svg>
+								Telegram
+							</a>
+
+							<a href="" class="social-tile link-hover">
+								<svg viewBox="0 0 24 24" fill="currentColor">
+									<path
+										d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+									/>
+								</svg>
+								GitHub
+							</a>
+
+							<a href="mailto:" class="social-tile link-hover">
+								<svg viewBox="0 0 24 24" fill="currentColor">
+									<path
+										d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"
+									/>
+								</svg>
+								Email
+							</a>
+
+							<a href="" class="social-tile link-hover">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									x="0px"
+									y="0px"
+									width="256"
+									height="256"
+									viewBox="0,0,256,256"
+									style="fill: #ffffff"
+								>
+									<g
+										fill="#ffffff"
+										fill-rule="nonzero"
+										stroke="none"
+										stroke-width="1"
+										stroke-linecap="butt"
+										stroke-linejoin="miter"
+										stroke-miterlimit="10"
+										stroke-dasharray=""
+										stroke-dashoffset="0"
+										font-family="none"
+										font-weight="none"
+										font-size="none"
+										text-anchor="none"
+										style="mix-blend-mode: normal"
+									>
+										<g transform="scale(4.4)">
+											<path
+												d="M32,6c-14.359,0 -26,11.641 -26,26c0,0.237 0.01158,0.47103 0.01758,0.70703l12.63867,4.43359c1.463,-1.906 3.75575,-3.14062 6.34375,-3.14062c0.182,0 0.36006,0.01534 0.53906,0.02734l3.52148,-6.33789c-0.04,-0.391 -0.06055,-0.78745 -0.06055,-1.18945c0,-6.351 5.149,-11.5 11.5,-11.5c6.351,0 11.5,5.149 11.5,11.5c0,6.351 -5.149,11.5 -11.5,11.5c-0.629,0 -1.2408,-0.06316 -1.8418,-0.16016l-5.6875,3.55469c0.014,0.201 0.0293,0.40047 0.0293,0.60547c0,4.418 -3.582,8 -8,8c-4.418,0 -8,-3.582 -8,-8c0,-0.258 0.01506,-0.51167 0.03906,-0.76367l-10.71289,-5.12305c1.972,12.404 12.71483,21.88672 25.67383,21.88672c14.359,0 26,-11.641 26,-26c0,-14.359 -11.641,-26 -26,-26zM40.5,19c-4.142,0 -7.5,3.358 -7.5,7.5c0,4.142 3.358,7.5 7.5,7.5c4.142,0 7.5,-3.358 7.5,-7.5c0,-4.142 -3.358,-7.5 -7.5,-7.5zM40.5,23c1.933,0 3.5,1.567 3.5,3.5c0,1.933 -1.567,3.5 -3.5,3.5c-1.933,0 -3.5,-1.567 -3.5,-3.5c0,-1.933 1.567,-3.5 3.5,-3.5zM25,37c-1.246,0 -2.37009,0.47256 -3.24609,1.22656l3.43555,1.20508c1.077,0.338 1.81055,1.33584 1.81055,2.46484c0,1.902 -1.98517,3.15498 -3.70117,2.33398l-3.22852,-1.54492c0.336,2.434 2.40269,4.31445 4.92969,4.31445c2.761,0 5,-2.239 5,-5c0,-2.761 -2.239,-5 -5,-5z"
+											></path>
+										</g>
+									</g>
+								</svg>
+								Steam
+							</a>
+
+							<a href="" class="social-tile link-hover">
+								<svg viewBox="0 0 24 24" fill="currentColor">
+									<path
+										d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+									/>
+								</svg>
+								Instagram
+							</a>
+
+							<a href="" class="social-tile link-hover">
+								<svg viewBox="0 0 24 24" fill="currentColor">
+									<path
+										d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"
+									/>
+								</svg>
+								LinkedIn
+							</a>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<footer class="text-sm text-gray-400">
+				<p flex flex-col items-center justify-center>design by yharnam</p>
+				<p>© 2025 yharnam. Все права защищены.</p>
+				<div class="friend flex justify-center">
+					<a href=""></a>
+				</div>
+			</footer>
+		</main>
+		<script src="./script.js"></script>
+	</body>
+</html>
